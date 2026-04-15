@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Webspot</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Inter", system-ui, sans-serif;
+        background-color: #0a0724;
+        color: #e4dfff;
+        --background: #120f2c;
+        --on-background: #e4dfff;
+        --primary: #c0c1ff;
+        --secondary-container: #42447b;
+        --on-surface-variant: #c7c4d7;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #0a0724;
+        color: #e4dfff;
+        font-family: "Inter", system-ui, sans-serif;
+        text-rendering: optimizeLegibility;
+      }
+
+      body::selection {
+        background: rgba(192, 193, 255, 0.3);
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .glow-circle {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(120px);
+        opacity: 0.6;
+      }
+
+      .glow-circle.primary {
+        width: 500px;
+        height: 500px;
+        top: 25%;
+        left: 25%;
+        background-color: rgba(192, 193, 255, 0.05);
+      }
+
+      .glow-circle.secondary {
+        width: 400px;
+        height: 400px;
+        bottom: 25%;
+        right: 25%;
+        background-color: rgba(130, 131, 255, 0.1);
+        filter: blur(100px);
+      }
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        max-width: 1024px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        line-height: 1.05;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: var(--on-background);
+      }
+
+      .hero-subtitle {
+        margin: 0;
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
+        font-weight: 600;
+        color: var(--primary);
+        letter-spacing: -0.03em;
+      }
+
+      .hero-contact {
+        margin: 0;
+      }
+
+      .hero-contact a {
+        font-size: 0.95rem;
+        color: var(--on-surface-variant);
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+
+      .hero-contact a:hover,
+      .hero-contact a:focus-visible {
+        color: var(--primary);
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          padding: 0 1rem;
+        }
+
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="glow-circle primary"></div>
+      <div class="glow-circle secondary"></div>
+      <div class="hero">
+        <h1 class="hero-title">Currently busy! 😎</h1>
+        <div class="hero-info">
+          <p class="hero-subtitle">Br, Janne</p>
+          <p class="hero-contact">
+            <a href="mailto:janne.peltola@webspot.fi"
+              >janne.peltola@webspot.fi</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
